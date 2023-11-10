@@ -3,7 +3,7 @@
 // @namespace    www.katasterjam.si
 // @version      1.5
 // @description  Fügt einen Button auf der Website hinzu, um Höhleninformationen in die Zwischenablage zu kopieren und zur nächsten Höhle zu wechseln.
-// @author       MissSobol
+// @author       Sobol
 // @match        https://www.katasterjam.si/caves/*
 // @grant        GM_setClipboard
 // ==/UserScript==
