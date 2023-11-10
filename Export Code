@@ -12,7 +12,7 @@ function downloadCSV(data) {
     + "caveNumber;name;length;depth;entranceElevation;coordinates\n";
 
   data.forEach(cave => {
-    const coordinates = `${(cave.ycoordinate / 10000).toFixed(5)}, ${(cave.xcoordinate / 10000).toFixed(5)}`;
+    const coordinates = `${cave.lat},${cave.lng}`;
     const row = [
       cave.caveNumber,
       cave.name,
@@ -50,8 +50,8 @@ for (let caveId = startId; caveId <= endId; caveId++) {
         length: data.length,
         depth: data.depth,
         entranceElevation: data.entranceElevation,
-        ycoordinate: data.ycoordinate,
-        xcoordinate: data.xcoordinate
+        lat: data.lat,
+        lng: data.lng
       });
 
       // Überprüfen, ob alle Daten abgerufen wurden
