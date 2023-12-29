@@ -27,8 +27,8 @@ async function getHohlenData(id) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(htmlString, 'text/html');
 
-    // Extrahiere die Informationen aus den .ui-block-a-Elementen
-    const data = Array.from(doc.querySelectorAll('.ui-block-a')).map(el => ({
+    // Extrahiere die Informationen aus den .ui-block-Elementen
+    const data = Array.from(doc.querySelectorAll('[class*="ui-block-"]')).map(el => ({
       label: el.querySelector('.label')?.textContent?.trim(),
       record: el.querySelector('.record')?.textContent?.trim()
     }));
